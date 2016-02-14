@@ -12,9 +12,13 @@ class TestInjectView: UIView {
     
     let testLabel = UILabel()
     
-    convenience init() {
-        self.init(frame:CGRectZero)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         render()
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
     
     func render() {
@@ -22,11 +26,11 @@ class TestInjectView: UIView {
         self.backgroundColor = UIColor.whiteColor()
         
         self.addSubview(testLabel)
-        testLabel.frame = CGRectMake(50, 100, 100, 20)
+        testLabel.frame = CGRectMake(50, self.frame.height-40, 100, 20)
         testLabel.text = "test2"
         
-        
         print("\(testLabel.frame)")
+        print("\(self.frame)")
         
     }
 

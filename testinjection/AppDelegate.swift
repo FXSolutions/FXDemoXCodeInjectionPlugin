@@ -19,7 +19,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.mainScreen().bounds)
         window.backgroundColor = UIColor.clearColor()
-        window.rootViewController = UINavigationController(rootViewController:ViewController())
+        
+        // my demo
+        //window.rootViewController = UINavigationController(rootViewController:ViewController())
+        
+        // demo from Stevia repo
+        window.rootViewController = ViewControllerDemo()
+        
         window.makeKeyAndVisible()
         self.window = window
         

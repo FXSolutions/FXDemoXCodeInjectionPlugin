@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         self.title = "TestInject"
         
         on("INJECTION_BUNDLE_NOTIFICATION") {
-            self.view = TestInjectView()
+            self.view = TestInjectView(frame: self.view.frame)
         }
         
     }
@@ -27,4 +27,5 @@ class ViewController: UIViewController {
     }
 
 }
+
 
